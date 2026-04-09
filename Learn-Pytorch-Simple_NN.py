@@ -19,7 +19,7 @@ class models (nn.Module):
         x = self.out(x)
         return x
     
-dataset = pd.read_csv('IRIS.CSV')
+dataset = pd.read_csv('IRIS.csv')
 
 
 device = "cuda" if torch.cuda.is_available else "cpu" # Check device if this device have a gpu using gpu or if this device hasn't gpu using cpu
