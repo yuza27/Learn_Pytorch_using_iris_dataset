@@ -22,7 +22,7 @@ class models (nn.Module):
 dataset = pd.read_csv('IRIS.csv')
 
 
-device = "cuda" if torch.cuda.is_available else "cpu" # Check device if this device have a gpu using gpu or if this device hasn't gpu using cpu
+device = "cuda" if torch.cuda.is_available() else "cpu" # Check device if this device have a gpu using gpu or if this device hasn't gpu using cpu
 le = LabelEncoder() #transform label type String to integer 
 X = dataset.drop('species',axis = 1 ) # drop a label data 
 y = dataset.species # only take a label kolom 
