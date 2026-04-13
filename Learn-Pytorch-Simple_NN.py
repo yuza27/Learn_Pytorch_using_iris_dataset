@@ -74,3 +74,4 @@ with torch.no_grad():
         if y_val.argmax().item() == y_test[i]: 
             benar +=1
 print(f"yang benar ada {benar} yang benar ")
+print("Hello world")
