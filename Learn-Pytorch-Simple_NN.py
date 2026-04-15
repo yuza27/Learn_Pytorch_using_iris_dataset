@@ -1,3 +1,4 @@
+import os
 import pandas as pd 
 import numpy as np 
 import torch 
@@ -74,4 +75,5 @@ with torch.no_grad():
         if y_val.argmax().item() == y_test[i]: 
             benar +=1
 print(f"yang benar ada {benar} yang benar ")
-print("Hello world")
+if not os.path.exists('models'):
+    os.makedirs('models')
