@@ -75,5 +75,7 @@ with torch.no_grad():
         if y_val.argmax().item() == y_test[i]: 
             benar +=1
 print(f"yang benar ada {benar} yang benar ")
+
 if not os.path.exists('models'):
     os.makedirs('models')
+torch.save(model, 'models/iris_model.pkl')
